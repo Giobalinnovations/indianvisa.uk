@@ -32,14 +32,29 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${plusJakartaSans.className} flex flex-col min-h-screen antialiased`}
+        className={`${plusJakartaSans.className} flex flex-col min-h-screen antialiased bg-background`}
       >
         <FormProvider>
           <ReactQueryProvider>
-            <Header />
-            <div className="flex-1">{children}</div>
-            <Footer />
-            <ToastContainer />
+            <div className="fixed inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/5 pointer-events-none"></div>
+            <div className="relative z-10">
+              <div className="bg-gradient-to-r from-primary/90 to-secondary/90 text-white">
+                <Header />
+              </div>
+              <main className="flex-1 container mx-auto px-4 relative">
+                <div className="absolute inset-0 bg-white/40 backdrop-blur-sm rounded-lg my-4"></div>
+                <div className="relative">{children}</div>
+              </main>
+              <Footer />
+              <ToastContainer
+                position="bottom-right"
+                autoClose={4000}
+                hideProgressBar={false}
+                closeOnClick
+                pauseOnHover
+                theme="colored"
+              />
+            </div>
           </ReactQueryProvider>
         </FormProvider>
         <GoogleTagManager gtmId="G-LC9MZM89N4" />
