@@ -36,11 +36,11 @@ export default function RootLayout({ children }) {
       >
         <FormProvider>
           <ReactQueryProvider>
+            <div className="z-50 bg-gradient-to-r from-primary/90 to-secondary/90 text-white">
+              <Header />
+            </div>
             <div className="fixed inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/5 pointer-events-none"></div>
             <div className="relative z-10">
-              <div className="bg-gradient-to-r from-primary/90 to-secondary/90 text-white">
-                <Header />
-              </div>
               <main className="flex-1 container mx-auto px-4 relative">
                 <div className="absolute inset-0 bg-white/40 backdrop-blur-sm rounded-lg my-4"></div>
                 <div className="relative">{children}</div>

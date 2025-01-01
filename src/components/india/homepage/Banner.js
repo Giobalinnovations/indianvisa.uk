@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const Banner = () => {
   return (
-    <div className="relative min-h-[600px] mt-20">
+    <div className="relative min-h-[600px] md:min-h-[calc(100vh-5rem)] mt-16 md:mt-20">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <div
@@ -14,32 +14,32 @@ const Banner = () => {
             backgroundPosition: 'center',
           }}
         >
-          {/* Multiple overlay layers for better content visibility */}
-          <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-black/80 to-primary/10"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/50"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,black_100%)] opacity-40"></div>
+          {/* Enhanced overlay layers for better content visibility */}
+          <div className="absolute inset-0 bg-gradient-to-br from-black/95 via-black/85 to-primary/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/60"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,black_100%)] opacity-50"></div>
         </div>
       </div>
 
       {/* Content */}
       <div className="container relative z-10 h-full px-4 mx-auto md:px-6 lg:px-8">
-        <div className="flex items-center h-full py-16 md:py-20">
+        <div className="flex items-center h-full py-12 md:py-16 lg:py-20">
           <div className="relative max-w-2xl text-white">
-            {/* Content Backdrop */}
-            <div className="absolute inset-0 bg-gradient-to-br from-black/40 to-primary/5 backdrop-blur-sm rounded-3xl"></div>
+            {/* Enhanced Content Backdrop */}
+            <div className="absolute inset-0 bg-gradient-to-br from-black/50 to-primary/10 backdrop-blur-sm rounded-3xl"></div>
 
-            {/* Actual Content */}
-            <div className="relative p-8 md:p-10">
-              <div className="inline-block px-4 py-1 mb-4 text-sm font-medium text-primary bg-primary/10 rounded-full border border-primary/20">
+            {/* Responsive Content */}
+            <div className="relative p-6 md:p-8 lg:p-10">
+              <div className="inline-block px-3 py-1 md:px-4 md:py-1.5 mb-3 md:mb-4 text-xs md:text-sm font-medium text-primary bg-primary/10 rounded-full border border-primary/20">
                 Simplified Visa Process
               </div>
 
-              <h1 className="mb-6 text-3xl font-bold leading-tight md:text-4xl lg:text-5xl">
+              <h1 className="mb-4 md:mb-6 text-2xl md:text-4xl lg:text-5xl font-bold leading-tight">
                 Your Gateway to{' '}
                 <span className="text-primary">Indian Visa</span> Services
               </h1>
 
-              <p className="mb-8 text-base text-gray-200 md:text-lg">
+              <p className="mb-6 md:mb-8 text-sm md:text-base lg:text-lg text-gray-200">
                 Experience a streamlined visa application process with our
                 advanced digital platform
               </p>
@@ -70,8 +70,8 @@ const Banner = () => {
                 </Link>
               </div>
 
-              {/* Trust Indicators */}
-              <div className="grid grid-cols-3 gap-6 pt-8 border-t border-white/10">
+              {/* Responsive Trust Indicators */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 pt-6 md:pt-8 border-t border-white/10">
                 <div className="flex items-center space-x-3">
                   <div className="p-2 rounded-lg bg-gradient-to-br from-primary/20 to-accent/10">
                     <svg
@@ -135,10 +135,10 @@ const Banner = () => {
         </div>
       </div>
 
-      {/* Decorative Elements */}
+      {/* Responsive Decorative Elements */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
-      <div className="absolute top-20 right-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 left-10 w-40 h-40 bg-accent/10 rounded-full blur-3xl"></div>
+      <div className="absolute top-10 md:top-20 right-5 md:right-10 w-24 md:w-32 h-24 md:h-32 bg-primary/10 rounded-full blur-2xl md:blur-3xl"></div>
+      <div className="absolute bottom-10 md:bottom-20 left-5 md:left-10 w-32 md:w-40 h-32 md:h-40 bg-accent/10 rounded-full blur-2xl md:blur-3xl"></div>
     </div>
   );
 };
